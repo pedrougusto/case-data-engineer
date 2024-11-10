@@ -73,7 +73,7 @@ O arquivo JSON contém informações agregadas de cada usuário, resumindo a úl
 - Documentação: Cada seção do código inclui comentários que explicam o propósito de cada bloco, visando facilitar a manutenção e a extensão da solução.
 
 ## 😊Agradecimentos
-Quero expressar meu sincero agradecimento pela oportunidade de participar do processo seletivo. Estou muito entusiasmado com a possibilidade de fazer parte desse time, a vaga representa uma excelente oportunidade para meu desenvolvimento profissional e de contribuir com a inovação e o crescimento da Enjoei/Elo7.
+Agradeço à Enjoei/Elo7 pela oportunidade de realizar este case. Estou entusiasmado com a possibilidade de contribuir para o time de engenharia de dados e explorar soluções inovadoras na área de dados.
 Agradeço mais uma vez pela oportunidade e fico à disposição para qualquer etapa adicional do processo.
 
 ## Licença
