@@ -1,4 +1,4 @@
-# Case Engenharia de Dados - API Fake Store | Enjoei/Elo7
+# Case API Fake Store | Enjoei/Elo7
 Este repositório contém uma solução para o case de Engenharia de Dados Júnior da Enjoei/Elo7, que consiste em consumir dados de uma API, processar e transformar as informações e gerar uma saída em formato JSON. O foco principal é coletar informações relevantes de usuários e carrinhos de compras, incluindo a data mais recente de adição ao carrinho e a categoria com maior número de produtos adicionados.
 
 ### Tópicos 
