@@ -10,8 +10,6 @@ Este repositório contém uma solução para o case de Engenharia de Dados Júni
 
 :small_blue_diamond: [Funcionalidades](#funcionalidades)
 
-:small_blue_diamond: [Seções](#seções)
-
 :small_blue_diamond: [Saída do arquivo JSON](#saída-do-arquivo-json)
 
 :small_blue_diamond: [Análise de Eficiência](#análise-de-eficiência)
@@ -61,7 +59,7 @@ Após cada requisição, verifico se a resposta foi bem-sucedida `status 200`. S
     print("Erro ao acessar a API de produtos")
 
 ### Transformação dos Dados:
-Realizei o mapeamento de cada `id` de produto para sua categoria correspondente.
+Utilizei um `defaultdict` para mapear cada `user_id` com a última data de adição ao carrinho e a categoria com o maior número de produtos.
 Processei cada carrinho para identificar:
 - A data mais recente de adição ao carrinho para cada usuário.
 - A categoria de produto mais adicionada no carrinho de cada usuário.
@@ -104,7 +102,8 @@ Preparando a saída final com a categoria mais frequente:
         "categoria_mais_produtos": categoria_mais_freq
 
 ### Geração do Arquivo JSON:
-Salvei o resultado final em um arquivo JSON, contendo:
+Com os dados processados, criei um `DataFrame` e o salvei em JSON, facilitando o uso em outras ferramentas.
+O arquivo contém:
 -   `user_id`: identificador único do usuário.
 -   `ultima_data`: última data de adição de produto ao carrinho.
 -   `categoria_mais_produtos`: categoria com maior quantidade de produtos adicionados.
@@ -116,11 +115,6 @@ Criando o dataFrame com o resultado final:
 Salvando no formato JSON:
 
     df.to_json("Case Data Engineer I - Pedro Augusto.json", orient="records")
-
-## ▶Seções
-- **Requisição de Dados**: Verifiquei o status de cada requisição e preparei uma mensagens de erro em caso de falha.
-- **Mapeamento e Processamento**: Utilizei um `defaultdict` para mapear cada `user_id` com a última data de adição ao carrinho e a categoria com o maior número de produtos.
-- **Preparação e Resultado Final**: Com os dados processados, criei um `DataFrame` e o salvei em JSON, facilitando o uso em outras ferramentas.
 
 ## 💾Saída do arquivo JSON
 A saída gerada será um arquivo JSON com o seguinte formato:
@@ -140,4 +134,4 @@ Agradeço à Enjoei/Elo7 pela oportunidade de realizar este case. Estou entusias
 Agradeço mais uma vez pela oportunidade e fico à disposição para qualquer etapa adicional do processo.
 
 ## Licença
-Este projeto está sob a Licença MIT.
+Este projeto está sob a **Licença MIT**.
