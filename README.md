@@ -24,7 +24,7 @@ Esse projeto é uma solução para o case de engenharia de dados, onde foi neces
 - Transformar e manipular os dados para extrair informações sobre cada usuário e seus consumos.
 - Persistir os dados em um arquivo JSON.
 
-## 🛠️Tecnologias Utilizadas
+## 🛠Tecnologias Utilizadas
 - **Python**: linguagem de programação escolhida por sua versatilidade e manipulação de dados.
 - **Pandas**: utilizado para estruturação e manipulação dos dados.
 - **Requests**: para consumo da API Fake Store.
@@ -65,7 +65,7 @@ Salvei o resultado final em um arquivo JSON, contendo:
 -   `ultima_data`: última data de adição de produto ao carrinho.
 -   `categoria_mais_produtos`: categoria com maior quantidade de produtos adicionados.
 
-## ▶️Seções
+## ▶Seções
 - **Requisição de Dados**: Verifiquei o status de cada requisição e preparei uma mensagens de erro em caso de falha.
 - **Mapeamento e Processamento**: Utilizei um `defaultdict` para mapear cada `user_id` com a última data de adição ao carrinho e a categoria com o maior número de produtos.
 - **Preparação e Resultado Final**: Com os dados processados, criei um `DataFrame` e o salvei em JSON, facilitando o uso em outras ferramentas.
@@ -77,7 +77,7 @@ A saída gerada será um arquivo JSON com o seguinte formato:
 
 O arquivo JSON contém informações agregadas de cada usuário, resumindo a última data de adição ao carrinho e a categoria mais popular.
 
-## ⚠️Análise de Eficiência
+## ⚠Análise de Eficiência
 - **Eficiência**: O uso de `defaultdict` reduz a complexidade ao contar produtos por categoria, tornando o processamento de dados mais eficiente.
 - **Escalabilidade**: A abordagem atual é eficaz para o volume de dados da API, mas, para grandes volumes seria bom considerar o uso de frameworks de processamento em lote.
 - **Tratamento de Erros**: Mensagens são exibidas para sinalizar qualquer problema de conexão com a API.
