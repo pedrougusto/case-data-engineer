@@ -123,7 +123,7 @@ A saída gerada será um arquivo JSON com o seguinte formato:
 
 O arquivo JSON contém informações agregadas de cada usuário, resumindo a última data de adição ao carrinho e a categoria mais popular.
 
-## ⚠Análise de Eficiência
+## ✅Análise de Eficiência
 - **Eficiência**: O uso de `defaultdict` reduz a complexidade ao contar produtos por categoria, tornando o processamento de dados mais eficiente.
 - **Escalabilidade**: A abordagem atual é eficaz para o volume de dados da API, mas, para grandes volumes seria bom considerar o uso de frameworks de processamento em lote.
 - **Tratamento de Erros**: Mensagens são exibidas para sinalizar qualquer problema de conexão com a API.
