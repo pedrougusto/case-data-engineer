@@ -1,7 +1,7 @@
 # Case API Fake Store | Enjoei/Elo7
 Este repositório contém uma solução para o case de Engenharia de Dados Júnior da Enjoei/Elo7, que consiste em consumir dados de uma API, processar e transformar as informações e gerar uma saída em formato JSON. O foco principal é coletar informações relevantes de usuários e carrinhos de compras, incluindo a data mais recente de adição ao carrinho e a categoria com maior número de produtos adicionados.
 
-### Tópicos 
+### Tópicos: 
 :small_blue_diamond: [Descrição do Projeto](#descrição-do-projeto)
 
 :small_blue_diamond: [Tecnologias Utilizadas](#tecnologias-utilizadas)
@@ -37,7 +37,7 @@ Esse projeto é uma solução para o case de engenharia de dados, onde foi neces
 ## 🚀Funcionalidades
 Abaixo estão os passos principais e funcionalidades do código.
 
-### Requisição dos Dados:
+### 📍Requisição dos Dados:
 Fiz a requisição à Fake Store API para buscar informações de carrinhos e produtos.
 
     url_carrinho = "https://fakestoreapi.com/carts"
@@ -58,9 +58,8 @@ Após cada requisição, verifico se a resposta foi bem-sucedida `status 200`. S
     else:
     print("Erro ao acessar a API de produtos")
 
-### Transformação dos Dados:
-Utilizei um `defaultdict` para mapear cada `user_id` com a última data de adição ao carrinho e a categoria com o maior número de produtos.
-Processei cada carrinho para identificar:
+### 📍Transformação dos Dados:
+Utilizei um `defaultdict` para mapear cada `user_id` e processei cada carrinho para identificar:
 - A data mais recente de adição ao carrinho para cada usuário.
 - A categoria de produto mais adicionada no carrinho de cada usuário.
 
@@ -87,7 +86,7 @@ Contando os produtos por categoria:
         categoria = produto_para_categoria[produto['productId']]
         dados_finais[user_id]['categorias'][categoria] += produto['quantity']
 
-### Preparação do Resultado Final:
+### 📍Preparação do Resultado Final:
 - Após processar todos os carrinhos, percorro os dados finais de cada usuário para identificar a categoria com o maior número de produtos adicionados.
 - Crio uma lista chamada `resultado_final`, onde cada entrada contém o `user_id`, a `ultima_data` e a `categoria_mais_produtos` do usuário.
 
@@ -101,7 +100,7 @@ Preparando a saída final com a categoria mais frequente:
         "ultima_data": info['ultima_data'].isoformat(),
         "categoria_mais_produtos": categoria_mais_freq
 
-### Geração do Arquivo JSON:
+### 📍Geração do Arquivo JSON:
 Com os dados processados, criei um `DataFrame` e o salvei em JSON, facilitando o uso em outras ferramentas.
 O arquivo contém:
 -   `user_id`: identificador único do usuário.
@@ -130,8 +129,7 @@ O arquivo JSON contém informações agregadas de cada usuário, resumindo a úl
 - **Documentação**: Cada seção do código inclui comentários que explicam o propósito de cada bloco, visando facilitar a manutenção e a extensão da solução.
 
 ## 😊Agradecimentos
-Agradeço à Enjoei/Elo7 pela oportunidade de realizar este case. Estou entusiasmado com a possibilidade de contribuir para o time de engenharia de dados e explorar soluções inovadoras na área de dados.
-Agradeço mais uma vez pela oportunidade e fico à disposição para qualquer etapa adicional do processo.
+Agradeço à equipe Enjoei/Elo7 pela oportunidade de realizar este case, estou entusiasmado com a possibilidade de contribuir para o time de engenharia de dados e explorar soluções inovadoras na área de dados. Agradeço mais uma vez pela oportunidade e fico à disposição para qualquer etapa adicional do processo.
 
 ## Licença
 Este projeto está sob a **Licença MIT**.
